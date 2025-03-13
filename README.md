@@ -10,62 +10,41 @@ A modern chat application that integrates with OpenAI's GPT-4 and optionally sav
 - FastAPI backend for reliable performance
 - Next.js frontend for smooth user experience
 
-## Setup
-
-### Backend Setup
-
-1. Create a virtual environment:
-```bash
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-```
-
-2. Install dependencies:
-```bash
-pip install -r requirements.txt
-```
-
-3. Create a `.env` file with your API keys:
-```
-OPENAI_API_KEY=your_openai_key
-NOTION_API_TOKEN=your_notion_token
-NOTION_PAGE_ID=your_notion_page_id
-```
-
-4. Run the backend:
-```bash
-cd backend
-uvicorn main:app --reload
-```
-
-### Frontend Setup
-
-1. Install dependencies:
-```bash
-cd frontend
-npm install
-```
-
-2. Run the development server:
-```bash
-npm run dev
-```
-
-## Development
-
-- Backend runs on `http://localhost:8000`
-- Frontend runs on `http://localhost:3000`
-- API documentation available at `http://localhost:8000/docs`
-
 ## Deployment
 
-This project is configured for deployment on Vercel. Simply push to your GitHub repository and connect it to Vercel for automatic deployments.
+This project is configured for deployment on Vercel. The application consists of two parts:
 
-## Environment Variables
+1. Frontend (Next.js)
+2. Backend (FastAPI)
 
+### Environment Variables
+
+The following environment variables need to be set in your Vercel project settings:
+
+#### Frontend
+- `NEXT_PUBLIC_API_URL`: URL of your deployed backend API
+
+#### Backend
 - `OPENAI_API_KEY`: Your OpenAI API key
 - `NOTION_API_TOKEN`: Your Notion API token
 - `NOTION_PAGE_ID`: The ID of the Notion page to save conversations to
+
+### Deployment Steps
+
+1. Fork this repository
+2. Create two new projects on Vercel:
+   - One for the frontend (point to the `frontend` directory)
+   - One for the backend (point to the `backend` directory)
+3. Configure the environment variables in both Vercel projects
+4. Deploy!
+
+## Development
+
+This project is designed for deployment on Vercel without requiring local development. However, if you need to make changes:
+
+1. Make your changes in the appropriate directory (frontend or backend)
+2. Commit and push to your fork
+3. Vercel will automatically deploy the changes
 
 ## License
 
