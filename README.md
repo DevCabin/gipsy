@@ -10,6 +10,10 @@ A modern chat application that integrates with OpenAI's GPT-4 and optionally sav
 - FastAPI backend for reliable performance
 - Next.js frontend for smooth user experience
 
+## Deployment Status
+
+🚀 Live Demo: [Frontend](https://gipsy-frontend.vercel.app) | [Backend](https://gipsy-api.vercel.app)
+
 ## Deployment
 
 This project is configured for deployment on Vercel. The application consists of two parts:
